@@ -1,0 +1,183 @@
+/* Card Default */
+.uk-card-default {
+	background: #fbfbfb !important;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.4) !important;
+	border-top: 5px solid transparent;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+/* Card Default Hover */
+.uk-card-default.uk-card-hover:hover {
+    background: linear-gradient(to bottom, #f5f5f5 0%, #ececec 100%) !important;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1) !important;
+    border-top: 5px solid #ec483b;
+    border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+    z-index: 1;
+    transform: scale(1.1);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* Card Body */
+.uk-card-body {
+    padding: 20px 20px !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+    .uk-card-body {
+	    padding: 20px 20px !important;
+	}
+}
+
+/* Card Title */
+.uk-card-default .uk-card-title {
+    color: #666 !important;
+}
+
+/* Card Title Hover */
+.uk-card-default.uk-card-hover:hover .uk-card-title {
+    color: #666 !important;
+}
+
+/* Card Icon */
+.uk-card-default.uk-card-hover span.hover {
+    display: none;
+}
+
+.uk-card-default.uk-card-hover span.default {
+    display: inherit;
+    color: #1e87f0;
+}
+
+/* Card Icon Hover */
+.uk-card-default.uk-card-hover:hover span.hover {
+    display: inherit;
+	color: #ec483b;
+}
+
+.uk-card-default.uk-card-hover:hover span.default {
+    display: none;
+}
+
+/* Card Footer */
+.uk-card-footer {
+	background: linear-gradient(to bottom, #ececec 0%, #f5f5f5 100%) !important;
+	padding: 15px 15px !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+    .uk-card-footer {
+	    padding: 15px 15px !important;
+	}
+}
+
+.uk-card-default.uk-card-hover:hover .uk-card-footer {
+    background: linear-gradient(to bottom, #f5f5f5 0%, #ececec 100%) !important;
+}
+
+/* Card Footer Text */
+.uk-section-default .uk-card-default .uk-card-footer p {
+	text-align: center;
+	font-size: 0.75rem;
+	line-height: 150%;
+	margin: 10px 0;
+	letter-spacing: 0.5px;
+}
+
+/* Card Footer Default */
+.uk-card-default.uk-card-hover div.default {
+    display: inherit;
+	padding: 5px 5px !important;
+	height: 41px;
+}
+
+.uk-card-default.uk-card-hover:hover div.default {
+    display: none;
+}
+
+/* Card Navbar Item */
+li {
+	display: inline;
+	list-style: none;
+	padding-right: 20px;
+}
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+    min-height: 0px !important;
+    padding: 0 0px !important;
+}
+
+/* Card Tooltip */
+[data-tooltip] {
+	cursor: pointer;
+	position: relative;
+	/********** Default Behavior ********* */
+	/********** Timeout Variant ********* */
+	/********** Tooltip Sizes ********* */
+	/********** Top Tooltip ********* */
+	/********** Right Tooltip ********* */
+	/********** Bottom Tooltip ********* */
+	/********** Left Tooltip ********* */
+}
+
+[data-tooltip]:before, [data-tooltip]:after {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.15s cubic-bezier(0.5, 1, 0.25, 1);
+	z-index: 1;
+}
+
+[data-tooltip]:before {
+	padding: 5px;
+	width: 50px;
+	border-radius: 3px;
+	background: #666;
+	color: #fff;
+	content: attr(data-tooltip);
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+[data-tooltip]:after {
+	border: 8px solid transparent;
+	width: 0;
+	content: "";
+	font-size: 0;
+	line-height: 0;
+}
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+	visibility: visible;
+	opacity: 1;
+}
+
+[data-tooltip].tooltip-top:before {
+	bottom: 100%;
+	left: 50%;
+	margin-bottom: 5px;
+	transform: translateX(-50%);
+}
+
+[data-tooltip].tooltip-top:after {
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 8px solid #666;
+	border-bottom: none;
+}
+
+[data-tooltip].tooltip-top:hover:before, [data-tooltip].tooltip-top:hover:after {
+	transform: translateX(-50%) translateY(-5px);
+}
